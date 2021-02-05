@@ -16,5 +16,7 @@ class PassagemForms(forms.Form):
     informacoes = forms.CharField(
         label='Informações extras',
         max_length=200,
-        widget=Textarea()
+        widget=Textarea(),
+        required=False,
     )
+    email = forms.EmailField(label='E-mail', max_length=150)
