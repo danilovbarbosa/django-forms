@@ -26,12 +26,15 @@ class PassagemForms(forms.Form):
     def clean(self):
         origem = self.cleaned_data.get('origem')
         destino = self.cleaned_data.get('destino')
+        data_ida = self.cleaned_data.get('data_ida')
+        data_volta = self.cleaned_data.get('data_volta')
 
         lista_de_erros = {}
 
         tem_caracter_numerico(origem, 'origem', lista_de_erros)
         tem_caracter_numerico(destino, 'destino', lista_de_erros)
         origem_destino_iguais(origem, destino, lista_de_erros)
+        data_ida_maior_que_a_data_volta(data_ida, data_volta, lista_de_erros)
 
         if lista_de_erros is not None:
             for erro in lista_de_erros:
