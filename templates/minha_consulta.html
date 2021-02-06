@@ -2,9 +2,13 @@
 
 {% block content %}
 
-<p>Sua origem é : {{ formulario.origem.value }}</p>
-<p>Sua destino é : {{ formulario.destino.value }}</p>
-<p>Sua data de ida é : {{ formulario.data_ida.value }}</p>
-<p>Sua data de volta é : {{ formulario.data_volta.value }}</p>
+<p>Sua origem é : {{ form.origem.value }}</p>
+<p>Sua destino é : {{ form.destino.value }}</p>
+<p>Sua data de ida é : {{ form.data_ida.value }}</p>
+<p>Sua data de volta é : {{ form.data_volta.value }}</p>
+<p>Sua data de pesquisa é : {{ form.data_pesquisa.value }}</p>
+<p>Sua classe de viagem é : {{ form.classe_viagem.value }}</p>
+<p>Suas informações é : {{ form.informacoes.value }}</p>
+<p>Sua e-mail é : {{ form.email.value }}</p>
 
 {% endblock %}
